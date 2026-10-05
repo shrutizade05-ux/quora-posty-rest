@@ -10,10 +10,10 @@
     <h1>QUORA POSTS</h1>
     <% for(post of posts) { %>
     <div class="posts">
-        <h3 class="user">@ <%= post.username %> </h3>
-        <h4 class="content"> <%= post.content %> </h4>
-    </div>
-    
+    <h3 class="user">@ <%= post.username %> </h3>
+    <h4 class="content"> <%= post.content %> </h4>
+    <a href="http://localhost:8080/posts/<%= post.id %>">see in detail</a>
+</div>
    <% } %>
 
    <br>

@@ -1,12 +1,15 @@
-h1{
+h1 {
     color: maroon;
 }
 
-
-.posts{
+.posts {
     background-color: bisque;
 }
 
-.user{
+.user {
     font-style: italic;
+}
+
+.post {
+    background-color: bisque;
 }
