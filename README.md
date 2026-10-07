@@ -8,6 +8,7 @@ A Quora-like REST project built using **Node.js, Express.js, and EJS**.
 - Express.js
 - EJS
 - UUID
+- Method-Override
 - HTML
 - CSS
 - JavaScript
@@ -15,12 +16,16 @@ A Quora-like REST project built using **Node.js, Express.js, and EJS**.
 ## Features
 
 - View all posts
-- Create a new post
+- Create new posts
+- Submit new posts
 - View individual posts in detail
 - Generate unique post IDs using UUID
+- Edit existing posts
 - Update post content using PATCH requests
-- EJS templates for dynamic pages
+- Delete posts using DELETE requests
+- Dynamic pages using EJS
 - Static CSS styling
+- Separate edit page with CSS styling
 
 ## REST Routes
 
@@ -30,7 +35,9 @@ A Quora-like REST project built using **Node.js, Express.js, and EJS**.
 | GET | `/posts/new` | Open the create-post form |
 | POST | `/posts` | Create a new post |
 | GET | `/posts/:id` | View a specific post |
+| GET | `/posts/:id/edit` | Open the edit-post form |
 | PATCH | `/posts/:id` | Update a post |
+| DELETE | `/posts/:id` | Delete a post |
 
 ## Project Structure
 
@@ -43,7 +50,8 @@ RESTCLASS/
 ├── views/
 │   ├── index.ejs
 │   ├── new.ejs
-│   └── show.ejs
+│   ├── show.ejs
+│   └── edit.ejs
 │
 ├── index.js
 ├── package.json
@@ -56,15 +64,18 @@ RESTCLASS/
 - Express.js server setup
 - Routing
 - Middleware
-- EJS
+- EJS templates
 - Dynamic routes
 - Request parameters
 - POST requests
 - PATCH requests
+- DELETE requests
 - UUID
+- Method-Override
 - REST API concepts
-- Static files and CSS
-- EJS dynamic data
+- Static files
+- CSS styling
+- CRUD operations
 
 ## How to Run
 
@@ -80,7 +91,7 @@ npm install
 node index.js
 ```
 
-### 3. Open the project
+### 3. Open in browser
 
 ```text
 http://localhost:8080/posts
